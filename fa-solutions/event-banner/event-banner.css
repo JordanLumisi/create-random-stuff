@@ -1,0 +1,126 @@
+/* Set up */
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Banner */
+
+.banner {
+	background: linear-gradient(298deg, rgba(0, 0, 29, 1) 27%, rgba(0, 0, 54, 1) 100%);
+	color: white;
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	align-items: center;
+	padding: 2rem;
+	border-radius: 1rem;
+	margin-bottom: 2rem;
+}
+
+.banner-text h1 {
+	color: white;
+	font-size: 2rem;
+	line-height: 125%;
+	text-wrap: balance;
+	margin-top: 1.5rem;
+	margin-bottom: 2rem;
+	font-weight: 400;
+}
+
+.banner-text h1 span.orange {
+	color: #f15623;
+	font-weight: bold;
+}
+
+.tag {
+	padding: 4px 8px;
+	background: white;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 0.875rem;
+	line-height: 100%;
+	color: #ffffff;
+	font-weight: bold;
+	background: rgb(241, 86, 35);
+	background: linear-gradient(60deg, rgba(241, 86, 35, 1) 52%, rgba(173, 28, 39, 1) 100%);
+}
+
+.date p,
+.location p {
+	color: #f15623;
+	font-size: 0.875rem;
+	line-height: 100%;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.date h4,
+.location h4 {
+	color: white;
+	font-size: 1.25rem;
+	line-height: 150%;
+	font-weight: 400;
+	margin-top: 0.5rem;
+	margin-bottom: 1.5rem;
+	text-wrap: balance;
+}
+
+.location h4 {
+	margin-bottom: 0;
+}
+
+.img {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+img {
+	width: 100%;
+	object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+	.banner {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Button */
+
+.button {
+	background-color: #ad1c27;
+	border-radius: 8px;
+	border: 2px solid #ffffff;
+	color: #ffffff;
+	display: block;
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	padding: 16px 24px;
+	text-decoration: none;
+	min-width: 30px;
+	text-align: center;
+	direction: ltr;
+	letter-spacing: 0px;
+	display: inline-block;
+	margin-bottom: 1rem;
+}
+
+.button a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+/* Page */
+
+.entry-featured {
+	display: none;
+	visibility: hidden;
+}

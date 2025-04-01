@@ -1,0 +1,23 @@
+{
+	"name": "create-random-stuff",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "live-server"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JordanLumisi/create-random-stuff.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/JordanLumisi/create-random-stuff/issues"
+	},
+	"homepage": "https://github.com/JordanLumisi/create-random-stuff#readme",
+	"description": "",
+	"dependencies": {
+		"live-server": "^1.2.0"
+	}
+}
