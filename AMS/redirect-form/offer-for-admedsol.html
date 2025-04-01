@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Offer for AMS - Montagu Private Equity LLP</title>
+		<script>
+			// Check if user has accepted the disclaimer
+			function checkAccess() {
+				const hasAccepted = localStorage.getItem("disclaimerAccepted");
+				const expiryTime = localStorage.getItem("disclaimerExpiry");
+
+				// Check if acceptance exists and hasn't expired
+				if (!hasAccepted || (expiryTime && new Date().getTime() > parseInt(expiryTime))) {
+					window.location.href = "/AMS/redirect-form/disclaimer.html";
+				}
+			}
+
+			// Check access when page loads
+			document.addEventListener("DOMContentLoaded", checkAccess);
+		</script>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				line-height: 1.6;
+				max-width: 1000px;
+				margin: 20px auto;
+				padding: 0 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Offer for Advanced Medical Solutions Group PLC</h1>
+		<p>This is the protected content that should only be visible after accepting the disclaimer.</p>
+		<!-- Add your actual offer content here -->
+	</body>
+</html>

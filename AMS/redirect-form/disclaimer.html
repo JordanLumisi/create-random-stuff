@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Important Disclaimer - AMS Possible Offer</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				line-height: 1.6;
+				max-width: 1000px;
+				margin: 20px auto;
+				padding: 0 20px;
+			}
+			.disclaimer {
+				margin-bottom: 30px;
+			}
+			.disclaimer h1 {
+				font-size: 24px;
+				margin-bottom: 20px;
+			}
+			.disclaimer p {
+				margin-bottom: 15px;
+			}
+			.form-controls {
+				text-align: center;
+				margin-top: 30px;
+			}
+			input[type="submit"] {
+				padding: 10px 30px;
+				margin: 0 10px;
+				font-size: 16px;
+				cursor: pointer;
+			}
+		</style>
+		<script>
+			// Check if user is trying to access offer page directly
+			if (window.location.pathname === "/AMS/redirect-form/offer-for-admedsol.html") {
+				const hasAccepted = localStorage.getItem("disclaimerAccepted");
+				if (!hasAccepted || checkDisclaimerExpiry()) {
+					window.location.href = "/AMS/redirect-form/disclaimer.html";
+				}
+			}
+
+			// Handle form submission
+			document.addEventListener("DOMContentLoaded", () => {
+				const form = document.querySelector("form");
+				form.addEventListener("submit", e => {
+					e.preventDefault();
+					const isAccepted = e.submitter.name === "accept";
+
+					if (isAccepted) {
+						// Store acceptance in localStorage
+						localStorage.setItem("disclaimerAccepted", "true");
+						// Set expiry time (24 hours from now)
+						localStorage.setItem("disclaimerExpiry", new Date().getTime() + 24 * 60 * 60 * 1000);
+						// Redirect to offer page
+						window.location.href = "/AMS/redirect-form/offer-for-admedsol.html";
+					} else {
+						// Redirect to home page or another appropriate location
+						window.location.href = "/";
+					}
+				});
+			});
+
+			// Function to check if disclaimer acceptance has expired
+			function checkDisclaimerExpiry() {
+				const expiryTime = localStorage.getItem("disclaimerExpiry");
+				if (expiryTime && new Date().getTime() > parseInt(expiryTime)) {
+					localStorage.removeItem("disclaimerAccepted");
+					localStorage.removeItem("disclaimerExpiry");
+					return true;
+				}
+				return false;
+			}
+		</script>
+	</head>
+	<body>
+		<form action="/AMS/redirect-form/offer-for-admedsol.html" method="post">
+			<div class="disclaimer">
+				<h1>Important Disclaimer</h1>
+				<p>
+					Possible offer (the "Possible Offer") by Montagu Private Equity LLP ("Montagu") for
+					Advanced Medical Solutions Group PLC ("AMS")
+				</p>
+
+				<p>
+					ACCESS TO THIS AREA OF THE WEBSITE ("MICROSITE") MAY BE RESTRICTED UNDER SECURITIES LAWS
+					OR REGULATIONS IN CERTAIN JURISDICTIONS. THIS NOTICE REQUIRES YOU TO CONFIRM CERTAIN
+					MATTERS (INCLUDING THAT YOU ARE NOT RESIDENT IN SUCH A JURISDICTION), BEFORE YOU MAY
+					OBTAIN ACCESS TO THE INFORMATION ON THIS MICROSITE. THESE MATERIALS ARE NOT DIRECTED AT OR
+					INTENDED TO BE ACCESSIBLE BY PERSONS RESIDENT IN ANY JURISDICTION WHERE TO DO SO WOULD
+					CONSTITUTE A VIOLATION OF THE RELEVANT LAWS OR REGULATIONS OF THAT JURISDICTION OR WOULD
+					RESULT IN A REQUIREMENT TO COMPLY WITH CONSENT OR OTHER FORMALITY WHICH AMS REGARDS AS
+					UNDULY ONEROUS (A "RESTRICTED JURISDICTION").
+				</p>
+
+				<p>
+					THIS MICROSITE CONTAINS ANNOUNCEMENTS, DOCUMENTS AND INFORMATION (THE "INFORMATION")
+					PUBLISHED BY MONTAGU AND/OR AMS RELATING TO THE POSSIBLE OFFER IN COMPLIANCE WITH THE CITY
+					CODE ON TAKEOVERS AND MERGERS (THE "CODE"). THE INFORMATION IS BEING MADE AVAILABLE IN
+					GOOD FAITH AND FOR INFORMATION PURPOSES ONLY, AND ITS AVAILABILITY IS SUBJECT TO THE TERMS
+					AND CONDITIONS SET OUT BELOW.
+				</p>
+
+				<h2>Access to the Information</h2>
+				<p>
+					If you would like to view the Information contained in this Microsite, please read this
+					notice carefully. This notice applies to all persons who view the Information contained in
+					this Microsite and, depending on where you are located, may affect your rights or
+					responsibilities. AMS reserves the right to amend or update this notice at any time and
+					you should, therefore, read it in full each time you visit this Microsite. In addition,
+					the contents of this Microsite may be amended at any time, in whole or in part, at the
+					sole discretion of AMS.
+				</p>
+
+				<p>
+					To allow you to view information about the Possible Offer, you must read this notice and
+					then click "I ACCEPT". If you are unable to agree, you should click "I DECLINE" and you
+					will not be able to view information about the Possible Offer.
+				</p>
+
+				<p>
+					The Information contained in this Microsite does not constitute an offer to sell or
+					otherwise dispose of or an invitation or solicitation of any offer to purchase or
+					subscribe for any securities pursuant to the Possible Offer or otherwise in any
+					jurisdiction in which such offer or solicitation is unlawful. The Possible Offer would be
+					made solely by means of an offer or scheme document which would contain the full terms and
+					conditions of such Possible Offer, including details on how it may be accepted. Any
+					decision made in relation to the Possible Offer should be made solely and only on the
+					basis of the information provided in any such document.
+				</p>
+
+				<h2>Overseas jurisdictions</h2>
+				<p>
+					This Information is not directed at or intended to be accessible by persons resident in
+					any Restricted Jurisdiction.
+				</p>
+
+				<p>
+					Viewing the Information you are seeking to access may be restricted under securities laws
+					in certain jurisdictions. All persons resident outside of the United Kingdom (the "UK")
+					who wish to view the Information contained in this Microsite must first satisfy themselves
+					that they are not subject to any local requirements which prohibit or restrict them from
+					doing so and should inform themselves about, and observe, any legal or regulatory
+					requirements applicable in their jurisdiction.
+				</p>
+
+				<p>
+					YOU SHOULD NOT DOWNLOAD, MAIL, FORWARD, DISTRIBUTE, SEND OR SHARE THE INFORMATION OR
+					DOCUMENTS CONTAINED ON THIS MICROSITE TO ANY PERSON. IN PARTICULAR, YOU SHOULD NOT MAIL,
+					FORWARD, DISTRIBUTE OR SEND THE INFORMATION OR DOCUMENTS CONTAINED THEREIN TO ANY
+					RESTRICTED JURISDICTION.
+				</p>
+
+				<h2>Additional U.S. information</h2>
+				<p>
+					The Possible Offer relates to the securities of a UK company and is subject to UK
+					procedural and disclosure requirements that are different from those of the United States.
+					Any financial statements or other financial information included in this Microsite may
+					have been prepared in accordance with non-US accounting standards that may not be
+					comparable to the financial statements of US companies or companies whose financial
+					statements are prepared in accordance with generally accepted accounting principles in the
+					United States. It may be difficult for US holders of shares to enforce their rights and
+					any claims they may have arising under the US federal securities laws in connection with
+					the Possible Offer, since AMS is located in a country other than the United States, and
+					some or all of their officers and directors may be residents of countries other than the
+					United States. US holders of shares may not be able to sue AMS or its respective officers
+					or directors in a non-US court for violations of the US securities laws. Further, it may
+					be difficult to compel AMS and its respective affiliates to subject themselves to the
+					jurisdiction or judgment of a US court.
+				</p>
+
+				<h2>Forward-Looking Statements</h2>
+				<p>
+					This Microsite and the Information contained in it may contain certain forward-looking
+					statements with respect to the financial condition, results of operations and businesses
+					of Montagu and AMS and the AMS Group (being AMS and its subsidiaries and subsidiary
+					undertakings).
+				</p>
+
+				<p>
+					All statements other than statements of historical fact are, or may be deemed to be,
+					forward-looking statements. Forward-looking statements are statements of future
+					expectations that are based on management's current expectations and assumptions and
+					involve known and unknown risks and uncertainties that could cause actual results,
+					performance or events to differ materially from those expressed or implied in these
+					statements.
+				</p>
+
+				<p>
+					There are a number of factors that could affect the future operations of AMS and the AMS
+					Group and could cause those results to differ materially from those expressed in the
+					forward-looking statements included in this Microsite. These factors include, but are not
+					limited to: price fluctuations in respect of particular product/s; changes in demand for
+					AMS products; currency fluctuations; loss of market share and industry competition;
+					environmental and physical risks; the risk of doing business in developing countries and
+					countries subject to international sanctions; legislative, fiscal and regulatory
+					developments including regulatory measures addressing climate change; economic and
+					financial market conditions in various countries and regions; changes in trading
+					conditions; the ability of AMS to successfully retain key employees; changes in general
+					economic, business and political conditions, including changes in the financial markets;
+					and compliance with extensive government regulation.
+				</p>
+
+				<p>
+					All forward-looking statements contained in this Microsite are expressly qualified in
+					their entirety by the cautionary statements contained or referred to in this section.
+					Readers should not place undue reliance on forward-looking statements.
+				</p>
+
+				<h2>Responsibility</h2>
+				<p>
+					In relation to any Possible Offer-related materials accessible on this Microsite please
+					note any statement of responsibility contained therein.
+				</p>
+
+				<p>
+					The documents included in this Microsite issued or published by AMS speak only at the
+					specified date of the relevant document and AMS has, and accepts, no responsibility or
+					duty to update or revise such documents.
+				</p>
+
+				<p>
+					In relation to any such announcements or other Possible Offer-related materials issued or
+					published by Montagu, or which relate to Montagu, that are accessible on this website, the
+					only responsibility accepted by AMS and its directors is for the correctness and fairness
+					of its reproduction.
+				</p>
+
+				<p>
+					Neither the directors of AMS, nor AMS, nor any of their affiliated companies, have
+					reviewed, and no such person is or shall be responsible for or accepts any liability in
+					respect of, any information contained on any other website which may be linked to or from
+					this Microsite.
+				</p>
+
+				<h2>Other</h2>
+				<p>
+					If you are in any doubt about the contents of this Microsite or the action you should
+					take, you should seek your own financial advice from an independent financial adviser
+					authorised under the Financial Services and Markets Act 2000 (as amended) or, if you are
+					located outside the UK, from an appropriately authorised independent financial adviser.
+				</p>
+
+				<p>This notice shall be governed by and construed in accordance with English law.</p>
+
+				<h2>Confirmation of understanding and acceptance</h2>
+				<p>By clicking "I ACCEPT" below, I confirm that:</p>
+				<ul>
+					<li>
+						I have read and understood the notice set out above and I agree to be bound by its
+						terms.
+					</li>
+					<li>
+						I am not (nor do I act on behalf of someone who is) resident in any country that renders
+						the accessing of the materials on this website or parts of it illegal.
+					</li>
+					<li>
+						I will not print, download, or otherwise seek to copy, mail, forward, distribute or send
+						any of the materials on this Microsite to any other person at any time.
+					</li>
+					<li>
+						I represent and warrant to AMS that I intend to access this Microsite for information
+						purposes only.
+					</li>
+				</ul>
+
+				<p>If you are not able to give these confirmations, you should click on I DECLINE below.</p>
+			</div>
+
+			<div class="form-controls">
+				<input type="submit" name="accept" value="I ACCEPT" />
+				<input type="submit" name="decline" value="I DECLINE" />
+			</div>
+		</form>
+	</body>
+</html>
