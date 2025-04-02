@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style.css" />
+		<title>HTML Canvas</title>
+	</head>
+	<body>
+		<!-- 
+            Note: Canvas content is not accessible to screen readers. If the canvas is purely decorative, 
+            include role="presentation" on the <canvas> opening tag. Otherwise, include descriptive text as 
+            the value of the aria-label attribute directly on the canvas element itself or include fallback 
+            content placed within the opening and closing canvas tag. Canvas content is not part of the 
+            DOM, but nested fallback content is. 
+        -->
+
+		<canvas id="canvas" width="800" height="800">
+			For accessibility, add fallback content within the Canvas element. This can be a static img
+			using the HTML img tag or plain text content. This content will only render when a browser
+			cannot render the canvas element or a user is using a screen reader. If the canvas is purely
+			presentational then fallback content isn't always needed.
+		</canvas>
+
+		<script src="./canvas.js"></script>
+	</body>
+</html>
