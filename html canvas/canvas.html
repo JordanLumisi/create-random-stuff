@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="https://use.typekit.net/aoh0bmn.css" />
 		<title>HTML Canvas</title>
 	</head>
 	<body>
@@ -15,12 +16,24 @@
             DOM, but nested fallback content is. 
         -->
 
-		<canvas id="canvas" width="800" height="800">
-			For accessibility, add fallback content within the Canvas element. This can be a static img
-			using the HTML img tag or plain text content. This content will only render when a browser
-			cannot render the canvas element or a user is using a screen reader. If the canvas is purely
-			presentational then fallback content isn't always needed.
-		</canvas>
+		<div class="canvas-container">
+			<canvas id="canvas">
+				For accessibility, add fallback content within the Canvas element. This can be a static img
+				using the HTML img tag or plain text content. This content will only render when a browser
+				cannot render the canvas element or a user is using a screen reader. If the canvas is purely
+				presentational then fallback content isn't always needed.
+			</canvas>
+		</div>
+
+		<section>
+			<h5>Client Communication Hub</h5>
+			<h1>FA Resonate</h1>
+			<p>
+				Welcome to FA Resonate, your hub for client communication and insights. Here, we will keep
+				you in tune with the latest product updates, ensuring our solutions remain resilient and
+				responsive to the ever-evolving investment landscape.
+			</p>
+		</section>
 
 		<script src="./canvas.js"></script>
 	</body>
