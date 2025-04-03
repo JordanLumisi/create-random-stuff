@@ -35,7 +35,7 @@ canvas {
 	max-height: 100vh;
 	overflow: hidden;
 	position: absolute;
-	top: 0;
+	/* top: 0; */
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -44,7 +44,7 @@ canvas {
 
 .canvas-container::after {
 	--slate: rgba(0, 0, 29, 1);
-	--indigo: rgba(0, 0, 54, 0);
+	--indigo: rgba(0, 0, 54, 1);
 
 	content: "";
 	position: absolute;
@@ -52,7 +52,13 @@ canvas {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	/* background: linear-gradient(to top right, var(--slate), var(--indigo)); */
+	background: linear-gradient(
+		to top right,
+		var(--slate) 0%,
+		var(--indigo) 25%,
+		transparent 75%,
+		transparent 100%
+	);
 }
 
 section {
