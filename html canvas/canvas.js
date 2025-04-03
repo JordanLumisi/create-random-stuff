@@ -9,8 +9,8 @@ function draw() {
 		ctx.canvas.height = pageWidth;
 
 		for (let i = 0; i < 60; i++) {
-			// roundedRect(ctx, 400, 400, 800, 800, 20, 4);
-			roundedRect(ctx, 100, 100, pageWidth, pageWidth, 20, 4);
+			roundedRect(ctx, pageWidth / 4, pageWidth / 4, 800, 800, 20, 4);
+			// roundedRect(ctx, 100, 100, pageWidth, pageWidth, 20, 4);
 			// roundedRect(ctx, 400, 400, 40, 40, 400, 16);
 			// roundedRect(ctx, 400, 400, pageWidth, pageWidth, 400, 16);
 			i++;
