@@ -52,7 +52,7 @@ canvas {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: linear-gradient(to top right, var(--slate), var(--indigo));
+	/* background: linear-gradient(to top right, var(--slate), var(--indigo)); */
 }
 
 section {
@@ -83,4 +83,22 @@ h5 {
 	margin-top: 0;
 	margin-bottom: 1rem;
 	font-size: 1rem;
+}
+
+aside.form-aside {
+	position: absolute;
+	background: oklch(21.6% 0.006 56.043);
+	padding: 2rem;
+	top: 2rem;
+	right: 2rem;
+	border-radius: 0.5rem;
+}
+
+.form-group {
+}
+
+.input-group {
+	display: flex;
+	gap: 2rem;
+	align-items: center;
 }
